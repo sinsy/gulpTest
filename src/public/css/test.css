@@ -1,0 +1,151 @@
+* {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	font-size: 30px;
+}
+
+.test,
+.comment,
+.bubble {
+	width: 200px;
+	height: 200px;
+	display: inline-block;
+}
+
+.test {
+	background: url(../img/comment.png) no-repeat 0 0;
+	display: block;
+}
+
+.comment {
+	background: url(../img/sprite.png) no-repeat 0 0;
+	background-position: -0px -0px;
+}
+
+.bubble {
+	background: url(../img/sprite.png) no-repeat 0 0;
+	background-position: -145px -0px;
+}
+
+body {
+	background: yellow;
+}
+
+/*postcss-simple-vars*/
+
+.blue {
+	color: #000;
+}
+
+/*autoprefixer*/
+
+:-webkit-full-screen a {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+
+:-moz-full-screen a {
+	display: flex;
+}
+
+:-ms-fullscreen a {
+	display: -ms-flexbox;
+	display: flex;
+}
+
+:fullscreen a {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+/*css-mqpacker*/
+
+.foo::before {
+	content: "foo on small";
+}
+
+.bar::before {
+	content: "bar on small";
+}
+
+/*postcss-nested*/
+
+.phone_title {
+	width: 500px;
+}
+
+body.is_dark .phone_title {
+	color: white;
+}
+
+.phone img {
+	display: block;
+}
+
+/*postcss-mixins*/
+
+.icon.is-twitter {
+	color: blue;
+	background: url(twt.png);
+}
+
+.icon.is-twitter:hover {
+	color: white;
+	background: blue;
+}
+
+.icon.is-youtube {
+	color: red;
+	background: url(youtube.png);
+}
+
+.icon.is-youtube:hover {
+	color: white;
+	background: red;
+}
+
+.search {
+	padding-left: 16px;
+}
+
+.search::after {
+	content: "";
+	background-url: url(/icons/search.png);
+}
+
+/*px2rem*/
+
+.selector {
+	width: 150px;
+	height: 64px;
+	/*px*/
+	font-size: 28px;
+	/*px*/
+	border: 1px solid #ddd;
+	/*no*/
+}
+
+@media screen and (min-width: 769px) {
+	.foo::before {
+		content: "foo on medium";
+	}
+
+	.bar::before {
+		content: "bar on medium";
+	}
+}
+
+@media (max-width: 500px) {
+	.phone_title {
+		width: auto;
+	}
+}

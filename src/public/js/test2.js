@@ -1,0 +1,1 @@
+document.getElementById('testjs2').innerHTML = 'testjs2';

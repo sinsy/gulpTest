@@ -1,0 +1,11 @@
+*{margin: 0;}
+a{text-decoration: none;}
+p{font-size: 30px;}
+.test,.comment, .bubble{
+	width: 200px;
+	height: 200px;
+	display: inline-block;
+}
+.test { background: url(../img/comment.png) no-repeat 0 0; display: block;}
+.comment { background: url(../img/sprite/ico-comment.png?__spriter) no-repeat 0 0; }
+.bubble { background: url(../img/sprite/ico-title.png?__spriter) no-repeat 0 0; }

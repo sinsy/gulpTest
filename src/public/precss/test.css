@@ -1,0 +1,87 @@
+@import 'part/base.css';
+@import 'part/header.css';
+/*postcss-simple-vars*/
+$blue: #000;
+.blue{
+	color: $blue;
+}
+
+/*autoprefixer*/
+:fullscreen a {
+    display: flex
+}
+
+/*css-mqpacker*/
+.foo::before {
+  content: "foo on small";
+}
+
+@media screen and (min-width: 769px) {
+  .foo::before {
+    content: "foo on medium";
+  }
+}
+
+.bar::before {
+  content: "bar on small";
+}
+
+@media screen and (min-width: 769px) {
+  .bar::before {
+    content: "bar on medium";
+  }
+}
+
+/*postcss-nested*/
+.phone {
+    &_title {
+        width: 500px;
+        @media (max-width: 500px) {
+            width: auto;
+        }
+        body.is_dark & {
+            color: white;
+        }
+    }
+    img {
+        display: block;
+    }
+}
+
+/*postcss-mixins*/
+@define-mixin icon $network, $color: blue {
+    .icon.is-$(network) {
+        color: $color;
+        @mixin-content;
+    }
+    .icon.is-$(network):hover {
+        color: white;
+        background: $color;
+    }
+}
+@mixin icon twitter {
+    background: url(twt.png);
+}
+@mixin icon youtube, red {
+    background: url(youtube.png);
+}
+
+@define-mixin icon $name {
+    padding-left: 16px;
+    &::after {
+        content: "";
+        background-url: url(/icons/$(name).png);
+    }
+}
+
+.search {
+    @mixin icon search;
+}
+
+/*px2rem*/
+.selector {
+    width: 150px;
+    height: 64px; /*px*/
+    font-size: 28px; /*px*/
+    border: 1px solid #ddd; /*no*/
+}

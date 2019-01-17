@@ -1,3 +1,6 @@
+## gulp-css-spriter需要进行配置
+https://www.cnblogs.com/dreamback/p/gulp-css-spriter.html
+
 ## 安装说明
 npm uninstall -g gulp
 npm i -g gulp-cli

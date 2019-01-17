@@ -14,7 +14,7 @@
     "css-mqpacker": "^4.0.1",
     "cssnano": "^3.5.2",
     "del": "^2.2.0",
-    "gulp": "gulpjs/gulp#4.0",
+    "gulp": "^4.0.0",
     "gulp-cache": "^0.4.4",
     "gulp-concat": "^2.6.0",
     "gulp-css-spriter": "^0.3.3",
